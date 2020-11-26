@@ -1,0 +1,49 @@
+<body>
+<div>
+  <h1>TASK 1</h1>
+  <div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+      <label >First Name</label>
+      <input type="text"  name="firstName" formControlName="firstName" placeholder="Your name..">
+
+      <label>Last Name</label>
+      <input type="text" name="lastName" formControlName="lastName" placeholder="Your last name..">
+
+      <label>Email</label>
+      <input type="email" name="email" formControlName="email" placeholder="Your email">
+
+      <label>Password</label>
+      <input type="password" formControlName="password" name="password" >
+
+      <button>Submit</button>
+    </form>
+  </div>
+  <ul>
+    <li>First Name: {{firstName}}</li>
+    <li>Last Name: {{lastName}}</li>
+    <li>Email: {{email}}</li>
+    <li>Password: {{password}}</li>
+  </ul>
+  <br>
+  <hr>
+  <br>
+  <h1>TASK 2</h1>
+  <div>
+    <form #templateFrom="ngForm" >
+      <label >First Name</label>
+      <input type="text"  name="firstName" placeholder="Your name.." ngModel>
+
+      <label>Last Name</label>
+      <input type="text" name="lastName" placeholder="Your last name.." ngModel>
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Your email" ngModel>
+
+      <label>Password</label>
+      <input type="password" name="password" ngModel>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+</body>
